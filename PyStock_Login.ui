@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PyStock_Login</class>
+ <widget class="QDialog" name="PyStock_Login">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>210</width>
+    <height>158</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PyStock</string>
+  </property>
+  <widget class="QLabel" name="Label_isConnected">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>100</y>
+     <width>59</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>30</y>
+     <width>141</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QPushButton" name="Button_Login">
+      <property name="text">
+       <string>Login</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="Login_CheckState">
+      <property name="text">
+       <string>Check State</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
