@@ -6,5 +6,6 @@ stockCode = sc.findStock(stockName)
 if stockCode != 0:
     sc.setInputValue(stockCode)
     df = sc.getDataValue()
+    print(df)
 else:
     print('정확한 종목 명을 입력하세요')

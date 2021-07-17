@@ -15,11 +15,14 @@ codeList2 = objCpCodeMgr.GetStockListByMarket(2) #코스닥
 #차트 객체 구하기
 objStockChart = win32com.client.Dispatch("CpSysDib.StockChart")
 
+# 종목 실시간 현재가
+objFutStockCurs = win32com.client.Dispatch("CpSysDib.FutStockCurS")
+
+
 
 def getCodeList():
     return
 
-def
 
 def findStock(stockName):
     for i in range(stockNum):
