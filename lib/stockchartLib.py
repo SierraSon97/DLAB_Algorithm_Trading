@@ -2,27 +2,23 @@ import win32com.client
 import pandas as pd
 import matplotlib.pyplot as plt
 
-#종목들 가져오기
+# 종목들 가져오기
 instCpStockCode = win32com.client.Dispatch("CpUtil.CpStockCode")
 stockNum = instCpStockCode.GetCount()
 
 # 종목코드 리스트 구하기
 objCpCodeMgr = win32com.client.Dispatch("CpUtil.CpCodeMgr")
-codeList = objCpCodeMgr.GetStockListByMarket(1) #거래소
-codeList2 = objCpCodeMgr.GetStockListByMarket(2) #코스닥
+codeList = objCpCodeMgr.GetStockListByMarket(1) # 거래소
+codeList2 = objCpCodeMgr.GetStockListByMarket(2) # 코스닥
 
-
-#차트 객체 구하기
+# 차트 객체 구하기
 objStockChart = win32com.client.Dispatch("CpSysDib.StockChart")
 
 # 종목 실시간 현재가
 objFutStockCurs = win32com.client.Dispatch("CpSysDib.FutStockCurS")
 
-
-
 def getCodeList():
     return
-
 
 def findStock(stockName):
     for i in range(stockNum):
