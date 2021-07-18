@@ -1,4 +1,4 @@
-from lib import stockchartLib as sc
+from lib import chartDataLib as sc
 
 stockName = input('찾고자 하는 종목의 이름을 입력하시오 : ')
 stockCode = sc.findStock(stockName)

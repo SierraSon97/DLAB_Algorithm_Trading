@@ -14,8 +14,13 @@ codeList2 = objCpCodeMgr.GetStockListByMarket(2) # 코스닥
 # 차트 객체 구하기
 objStockChart = win32com.client.Dispatch("CpSysDib.StockChart")
 
-# 종목 실시간 현재가
-objFutStockCurs = win32com.client.Dispatch("CpSysDib.FutStockCurS")
+# 현재가 객체 구하기
+objStockMst = win32com.client.Dispatch("DsCbo1.StockMst")
+
+
+def getObjStock(stockCode):
+    objStockMst.SetInputValue(0, stockCode)
+    objStockMst.BlockRequest()
 
 def getCodeList():
     return
