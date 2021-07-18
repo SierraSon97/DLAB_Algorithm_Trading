@@ -5,7 +5,8 @@ from PyQt5.QtWidgets import QMainWindow
 from lib import tradeLib
 from lib import chartDataLib
 
-ui = uic.loadUiType('./ui/main.ui')[0]
+ui = uic.loadUiType('../ui/main.ui')[0]
+
 objCpCybos = win32com.client.Dispatch("CpUtil.CpCybos")
 bConnect = objCpCybos.IsConnect
 
