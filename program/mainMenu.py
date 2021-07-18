@@ -13,14 +13,23 @@ class MainWindow(QMainWindow, ui):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
+        self.btn_chkBal.clicked.connect(self.checkBalance())
+        self.btn_chkcut.clicked.connect(self.checkCount())
+        self.btn_purchase.clicked.connect(self.purchase())
+        self.btn_sell.clicked.connect(self.sell())
+
 
     def checkBalance(self):
+        print('test1')
         return
     def checkCount(self):
+        print('test2')
         return
     def purchase(self):
+        print('test3')
         return
     def sell(self):
+        print('test4')
         return
 
 
