@@ -10,6 +10,9 @@ ui = uic.loadUiType('../ui/main.ui')[0]
 objCpCybos = win32com.client.Dispatch("CpUtil.CpCybos")
 bConnect = objCpCybos.IsConnect
 
+checkBalance = tradeLib.Cp6033()
+
+
 class MainWindow(QMainWindow, ui):
     def __init__(self):
         super().__init__()
@@ -21,7 +24,8 @@ class MainWindow(QMainWindow, ui):
 
 
     def checkBalance(self):
-        print('test1')
+        retcode = int(input('계좌번호를 입력하세요 : '))
+        checkBalance.Request(retcode)
         return
     def checkCount(self):
         print('test2')
