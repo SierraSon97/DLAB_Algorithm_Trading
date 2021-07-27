@@ -33,13 +33,25 @@ def findStock(stockName):
     return 0
 
 def setInputValue(stockCode):
-    objStockChart.SetInputValue(0, stockCode)  # 종목 코드 - 삼성전자
+    objStockChart.SetInputValue(0, stockCode)  # 종목 코드
     objStockChart.SetInputValue(1, ord('2'))  # 개수로 조회
     objStockChart.SetInputValue(4, 100)  # 최근 100일 치
     objStockChart.SetInputValue(5, [0, 2, 3, 4, 5, 8])  # 날짜,시가,고가,저가,종가,거래량
     objStockChart.SetInputValue(6, ord('D'))  # '차트 주가 - 일간 차트 요청
     objStockChart.SetInputValue(9, ord('1'))  # 수정주가 사용
     objStockChart.BlockRequest()
+
+def setInputValue(stockCode, startDate, endDate):
+    objStockChart.SetInputValue(0, stockCode)  # 종목 코드
+    objStockChart.SetInputValue(1, ord('2'))  # 개수로 조회
+    objStockChart.SetInputValue(2, startDate)
+    objStockChart.SetInputValue(3, endDate)
+    objStockChart.SetInputValue(4, 100)  # 최근 100일 치
+    objStockChart.SetInputValue(5, [0, 2, 3, 4, 5, 8])  # 날짜,시가,고가,저가,종가,거래량
+    objStockChart.SetInputValue(6, ord('D'))  # '차트 주가 - 일간 차트 요청
+    objStockChart.SetInputValue(9, ord('1'))  # 수정주가 사용
+    objStockChart.BlockRequest()
+
 
 def getDataValue():
     len = objStockChart.GetHeaderValue(3)
