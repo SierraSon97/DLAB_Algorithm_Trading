@@ -1,7 +1,9 @@
 import sys
 import win32com.client
-from PyQt5 import QtCore, QtWidgets, uic
+from PyQt5 import uic
+from PyQt5.QtCore import QTime
 from PyQt5.QtWidgets import QMainWindow
+from PyQt5.QtWidgets import *
 from lib import tradeLib
 from lib import chartDataLib
 
@@ -22,6 +24,11 @@ class MainWindow(QMainWindow, ui):
         self.btn_purchase.clicked.connect(self.purchase)
         self.btn_sell.clicked.connect(self.sell)
 
+    def timeout(self):
+        current_time = QTime.currentTime()
+        text_time = current_time.toString("hh:mm:ss")
+        time_msg = "현재시간 : " + text_time
+        self.statusBar().show
 
     def checkBalance(self):
         retcode = int(input('계좌번호를 입력하세요 : '))
